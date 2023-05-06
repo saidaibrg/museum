@@ -1,0 +1,31 @@
+
+.Toolbar {
+    height: 80%;
+    width: 50px;
+    background-color: rgb(214, 214, 214);
+  }
+  
+  .ToolbarList{
+    height: auto;
+    width: 100%;
+    list-style-type: none;
+  }
+  
+  .ToolbarList .row{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: rgb(136, 136, 136);
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  .ToolbarList .row:hover {
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+  }
