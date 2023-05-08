@@ -1,13 +1,12 @@
 // Associated with the / route
 import React, { useEffect } from 'react';
 
-import Toolbar from "./Toolbar"
 
 
-function index(){
+function about(){
   return <h1>
-    <Toolbar />
+    About the Museum Project
   </h1>;
 }
 
-export default index;
+export default about;

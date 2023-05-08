@@ -4,16 +4,16 @@ import React from "react"
 import Head from "next/head"
 import '@/styles/globals.css'
 import Navbar from '@/components/Navbar'
-import Upload from "@/pages/Upload"
-import Toolbar from "./Toolbar"
+import Layout from "@/components/Layout"
+import Upload from "@/components/Upload"
 
 export default function App({ Component, pageProps }) {
   return (
   <div>
-    <Navbar />
+    <Layout>
+       <Component {...pageProps} />
+    </Layout>
     <Upload />
-    <Toolbar />
-    <Component {...pageProps} />
   </div>
   );
 }
