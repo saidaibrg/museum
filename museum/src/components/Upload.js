@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { images } from "../../next.config";
+import anime from "animejs/lib/anime.es.js";
 
 function Upload(){
     const [imageSrc, setImageSrc]=useState();
@@ -12,7 +13,8 @@ function Upload(){
             setUploadData(undefined);
         }
         reader.readAsDataURL(event.target.files[0]);
-    }
+        
+    }    
 
     async function handleSubmit(event){
         event.preventDefault();
@@ -22,8 +24,32 @@ function Upload(){
         for (const file of fileInput.files){
              formData.append('file', file);
         }
-        formData.append('upload_preset', 'my-uploads');     
+        formData.append('upload_preset', 'my-uploads');   
+        // test below
+        runAnimation(imageSrc)  
     }
+
+    const runAnimation = (fileData) => {
+        let animation = anime.timeline({
+            targets: fileData,
+            easing: 'easeInOutExpo',
+            loop: true,
+        })
+
+        animation
+        .add({
+            scale: 0,
+            translateX: function(){
+                return anime.random(-360, 2100);},
+            translateY: function(){
+                return anime.random(-360, 2100);},
+            rotate: function(){
+                return anime.random(-360,360);},
+            duration: function(){
+                return anime.random(500, 3000);},
+            
+        }) 
+      };
 
     return (
         <div class="mt-20">

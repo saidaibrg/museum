@@ -1,14 +1,15 @@
+import React from 'react'
 import { ToolbarData } from '../components/Toolbardata'
 import styles from '../styles/Toolbar.module.css'
 
- function Toolbar() {
+function Toolbar() {
   return (
     <div className={styles.Toolbar}>
       <ul className={styles.ToolbarList}>
         {ToolbarData.map((val, key) => {
           return (
             <li key={key} className={styles.row}>
-              <div>{val.action}</div>{" "}
+              <button onClick={val.function} >{val.action}</button>{" "}
             </li>
           )
         })}

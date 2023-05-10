@@ -1,7 +1,7 @@
 // Associated with the / route
 import React, { useEffect } from 'react';
 
-import Toolbar from "./Toolbar"
+import Toolbar from '@/components/Toolbar';
 
 
 function index(){

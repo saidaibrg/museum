@@ -1,20 +1,40 @@
 import React from 'react'
+import Toolbar from './Toolbar';
+  
+const paintImage = () => {
+      
+};
 
+const shredImage = () => {
+ 
+};
+
+const soundImage = () => {
+ 
+};
+
+const pixelateImage = () => {
+  
+}
 export const ToolbarData = [
     {
         action: "paint",
-        icon: "none"
+        icon: "none",
+        function: {paintImage}
     },
     {
         action: "shred",
-        icon: "none"
+        icon: "none",
+        function: {shredImage}
     },
     {
         action: "sound",
-        icon: "none"
+        icon: "none",
+        function: {soundImage}
     },
     {
         action: "pixelate",
-        icon: "none"
+        icon: "none",
+        function: {pixelateImage}
     },
 ];
