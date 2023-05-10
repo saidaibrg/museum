@@ -1,0 +1,33 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+.container
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.container .block
+{
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    background: url("boom.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* background: red; */
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    
+}
