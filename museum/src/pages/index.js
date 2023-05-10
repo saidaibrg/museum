@@ -2,12 +2,14 @@
 import React, { useEffect } from 'react';
 
 import Toolbar from '@/components/Toolbar';
+import Upload from '@/components/Upload';
 
 
 function index(){
-  return <h1>
+  return <div class="flex flex-row">
     <Toolbar />
-  </h1>;
+    <Upload />
+  </div>;
 }
 
 export default index;

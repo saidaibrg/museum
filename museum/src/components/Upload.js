@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { images } from "../../next.config";
-import anime from "animejs/lib/anime.es.js";
 
 function Upload(){
     const [imageSrc, setImageSrc]=useState();
@@ -26,37 +25,14 @@ function Upload(){
         }
         formData.append('upload_preset', 'my-uploads');   
         // test below
-        runAnimation(imageSrc)  
     }
 
-    const runAnimation = (fileData) => {
-        let animation = anime.timeline({
-            targets: fileData,
-            easing: 'easeInOutExpo',
-            loop: true,
-        })
-
-        animation
-        .add({
-            scale: 0,
-            translateX: function(){
-                return anime.random(-360, 2100);},
-            translateY: function(){
-                return anime.random(-360, 2100);},
-            rotate: function(){
-                return anime.random(-360,360);},
-            duration: function(){
-                return anime.random(500, 3000);},
-            
-        }) 
-      };
-
     return (
-        <div class="mt-20">
+        <div class="mt-11">
             <h2> Upload Image: </h2>
             <form className="form" method="post" onChange={handleChange} onSubmit={handleSubmit}>
-                <input class="w-full text-sm text-gray-900 border border-gray-300  cursor-pointer focus:outline-none ml-10" type="file" name="file"/>
-            <img src={imageSrc} />
+                <input class="w-full text-sm text-gray-900 border border-gray-300  cursor-pointer focus:outline-none" type="file" name="file"/>
+            <img class="object-fit: contain h-90 w-90 " src={imageSrc} />
 
             {imageSrc && !uploadData && (
                 <button>Upload Files</button>
