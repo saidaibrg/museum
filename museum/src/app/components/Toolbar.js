@@ -1,8 +1,7 @@
-import React from 'react'
-import { ToolbarData } from '../components/Toolbardata'
-import styles from '../styles/Toolbar.module.css'
 
-function Toolbar() {
+import { ToolbarData } from './Toolbardata'
+
+const Toolbar = () => {
   return (
     <div className={styles.Toolbar}>
       <ul className={styles.ToolbarList}>

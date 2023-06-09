@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from "react";
-import { images } from "../../next.config";
+import { images } from "../../../next.config";
 
 function Upload(){
     const [imageSrc, setImageSrc]=useState();
